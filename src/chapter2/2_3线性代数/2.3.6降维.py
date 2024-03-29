@@ -22,13 +22,13 @@ print(z.mean(axis=0)) # 0轴的平均值
 print(z.sum(axis=0) / z.shape[0])
 
 # 非维度求和
-A = torch.arange(4).reshape(-1,2)
+
+A = torch.arange(4).reshape(2,2)
 sum_A = A.sum(axis=1, keepdim=True)
 print(sum_A) # 求和之后保持了维度，除法进行了广播机制
-print(sum_A.shape) # torch.Size([2,1])
-print(A / sum_A) # 广播删除
-
-#如果keepdim=False 广播机制还是可以进行，但是sum_A的维度就是1 torch.Size([2])
+print(sum_A.shape) # torch.Size([2,1]) torch.Size([2])
+print(A / sum_A) # 广播删除 torch.Size([2, 2])
+#如果keepdim=False 广播机制还是可以进行 因为是方阵
 
 # 某个轴的累积总和
 print(A.cumsum(axis=0))
