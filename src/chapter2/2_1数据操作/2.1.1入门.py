@@ -6,6 +6,7 @@ y = torch.tensor([
     [1,2,3],
     [4,5,6]
 ])
+
 # 查看张量形状
 print(x.shape)
 print(y.shape)
