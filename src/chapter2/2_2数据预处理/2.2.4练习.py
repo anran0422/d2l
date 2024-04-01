@@ -2,7 +2,6 @@ import torch
 import pandas as pd
 import os
 
-
 os.makedirs(os.path.join(".",'data'),exist_ok=True)
 data_file = os.path.join(".",'data','data.csv')
 with open("./data/data.csv", mode='w', encoding='utf') as f:
